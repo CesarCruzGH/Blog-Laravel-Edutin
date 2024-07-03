@@ -14,4 +14,8 @@ class Category extends Model
         'id','created_at', 'updated_at'
     ];
 
+        //RELATION 1:M
+    public function articles(){
+        return $this->hasMany(Article::class);
+    }
 }

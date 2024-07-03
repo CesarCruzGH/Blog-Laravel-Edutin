@@ -14,4 +14,21 @@ class Article extends Model
         'id','created_at', 'updated_at'
     ];
 
+
+    // //Relacion de usuarios y articles 1:M INVERSA
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    //Relation 1:M
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+
+     //RELATION 1:M INVERSA
+     public function category(){
+        return $this->belongsTo(Category::class);
+     }
 }

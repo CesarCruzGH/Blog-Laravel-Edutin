@@ -13,4 +13,11 @@ class Profile extends Model
     [
         'id','created_at', 'updated_at'
     ];
+
+    //Relacion de 1:1 inversa
+    public function user (){
+        return $this->belongsTo(User::class);
+    }
+
+     
 }

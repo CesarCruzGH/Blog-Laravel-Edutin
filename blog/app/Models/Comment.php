@@ -14,4 +14,14 @@ class Comment extends Model
         'id','created_at', 'updated_at'
     ];
 
+    //Relation 1:M INVERSA
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+        //Relation 1:M inversa
+        public function article(){
+            return $this->belongsTo(Article::class);
+        }
 }
